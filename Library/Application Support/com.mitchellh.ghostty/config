@@ -1,0 +1,10 @@
+theme = catppuccin-mocha
+background-opacity = 0.8
+background-blur-radius = 20
+macos-titlebar-style = hidden
+mouse-scroll-multiplier = 0.5
+mouse-hide-while-typing = true
+shell-integration = fish
+command = /opt/homebrew/bin/fish
+
+window-padding-balance = true

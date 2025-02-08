@@ -3,6 +3,8 @@ return {
     opts = {
         formatters_by_ft = {
             vue = { "prettier" },
+            typescript = { "prettier" },
+            javascript = { "prettier" },
         },
     },
 }

@@ -3,7 +3,7 @@ return {
     dependencies = {
         "akinsho/flutter-tools.nvim",
     },
-    opts = function(_, _opts)
+    opts = function(_, _)
         require("telescope").load_extension("flutter")
     end,
 }

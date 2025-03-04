@@ -1,7 +1,8 @@
 eval $(/opt/homebrew/bin/brew shellenv)
 
 set -gx PATH $HOME/.cargo/bin $PATH
-
+set -gx PATH $HOME/development/flutter/bin $PATH
+set -gx PATH $HOME/.gem/bin $PATH
 #if status is-interactive
 #    # Commands to run in interactive sessions can go here
 #end

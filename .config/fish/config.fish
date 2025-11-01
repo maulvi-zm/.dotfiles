@@ -12,8 +12,12 @@ set -gx CHROME_EXECUTABLE "/Applications/Arc.app/Contents/MacOS/Arc" # CHROME_EX
 set -gx EDITOR nvim
 
 set -gx TCFRAME_HOME ~/tcframe
+
+# Aliases
 alias tcframe $TCFRAME_HOME/scripts/tcframe
+alias z 'zoxide query'
 
 starship init fish | source
 kubectl completion fish | source
+zoxide init fish | source
 fish_add_path $HOME/.local/bin

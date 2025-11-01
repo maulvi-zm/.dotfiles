@@ -1,4 +1,4 @@
-theme = catppuccin-mocha
+theme = Kanagawa Dragon
 background-opacity = 0.8
 background-blur-radius = 20
 macos-titlebar-style = hidden
@@ -7,3 +7,4 @@ mouse-hide-while-typing = true
 shell-integration = fish
 command = /opt/homebrew/bin/fish
 window-padding-balance = true
+custom-shader = shaders/cursor_tail.glsl

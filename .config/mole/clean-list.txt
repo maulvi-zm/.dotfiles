@@ -1,0 +1,64 @@
+# Mole Cleanup Preview - 2025-12-27 15:33:27
+#
+# How to protect files:
+# 1. Copy any path below to ~/.config/mole/whitelist
+# 2. Run: mo clean --whitelist
+#
+# Example:
+#   /Users/*/Library/Caches/com.example.app
+#
+
+
+=== User essentials ===
+/Users/maulvizm/Library/Caches  # 1.98GB (32 items)
+/Users/maulvizm/Library/Logs  # 3.1MB (8 items)
+
+=== Finder metadata ===
+
+=== macOS system caches ===
+
+=== Sandboxed app caches ===
+
+=== Browsers ===
+/Users/maulvizm/Library/Caches/zen/Profiles  # 1.03GB
+
+=== Cloud storage ===
+
+=== Office applications ===
+
+=== Developer tools ===
+/Users/maulvizm/Library/pnpm/store/v10  # 53.6MB
+/Users/maulvizm/.bun/install/cache  # 54.0MB (13 items)
+/Users/maulvizm/.cache/uv  # 508.2MB (5 items)
+/Users/maulvizm/.kube/cache  # 2.1MB (2 items)
+/Users/maulvizm/.cache/pre-commit  # 345.3MB (15 items)
+/Users/maulvizm/.gradle/caches  # 22.1MB (5 items)
+/Users/maulvizm/.gradle/daemon  # 1.3MB (2 items)
+/Users/maulvizm/Library/Caches/SentryCrash  # 8KB (2 items)
+/Users/maulvizm/Library/Caches/Homebrew  # 136.7MB (6 items)
+
+=== Development applications ===
+/Users/maulvizm/Library/Caches/com.apple.dt.Xcode  # 548KB (4 items)
+/Users/maulvizm/Library/Caches/us.zoom.xos/WebKit  # 76KB
+/Users/maulvizm/Library/Caches/com.raycast.macos  # 32.2MB (7 items)
+/Users/maulvizm/Library/Caches/com.apple.TV  # 13.3MB (7 items)
+
+=== Virtual machine tools ===
+
+=== Application Support ===
+
+=== Uninstalled app data ===
+/Users/maulvizm/Library/HTTPStorages/com.roblox.RobloxPlayer.binarycookies  # 4KB
+
+=== Apple Silicon updates ===
+
+=== iOS device backups ===
+
+=== Time Machine incomplete backups ===
+
+# ============================================
+# Summary
+# ============================================
+# Potential cleanup: 4.31GB
+# Items: 129
+# Categories: 19

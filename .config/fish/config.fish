@@ -2,7 +2,6 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 # Aliases
 alias tcframe $TCFRAME_HOME/scripts/tcframe
-alias cd 'zoxide query'
 alias ls 'eza --icons=always'
 
 set -gx PATH $HOME/.cargo/bin $PATH

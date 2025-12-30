@@ -5,3 +5,10 @@
 [2025-10-21 08:04:43] INFO: Force quitting running applications...
 [2025-10-21 08:04:46] INFO: Starting batch uninstallation...
 [2025-10-21 08:04:48] WARNING: 1 applications failed to uninstall
+[2025-12-17 18:36:49] SUCCESS: System temp files
+[2025-12-17 18:36:49] SUCCESS: System crash reports
+[2025-12-17 18:36:49] SUCCESS: System logs
+[2025-12-17 18:36:50] SUCCESS: Browser code signature caches (2 items)
+[2025-12-17 18:36:50] SUCCESS: System diagnostic logs
+[2025-12-17 18:36:50] SUCCESS: Power logs
+[2025-12-27 15:33:11] SUCCESS: Security settings updated

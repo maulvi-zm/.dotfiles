@@ -10,3 +10,6 @@ vim.opt.softtabstop = 4 -- Number of spaces that a <Tab> counts for while perfor
 
 -- Setting for php intelephense
 vim.g.lazyvim_php_lsp = "intelephense"
+
+-- Enable auto-wrap
+vim.opt.wrap = true

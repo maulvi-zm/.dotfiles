@@ -12,3 +12,6 @@ export PATH="/opt/homebrew/Cellar/postgresql@16/16.4/bin:$PATH"
 [ -s "/Users/maulvizm/.bun/_bun" ] && source "/Users/maulvizm/.bun/_bun"
 
 eval "$(fnm env --use-on-cd --shell zsh)"
+
+# Added by Antigravity
+export PATH="/Users/maulvizm/.antigravity/antigravity/bin:$PATH"

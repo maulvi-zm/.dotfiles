@@ -17,8 +17,8 @@ set -gx CHROME_EXECUTABLE "/Applications/Arc.app/Contents/MacOS/Arc" # CHROME_EX
 set -gx EDITOR nvim
 set -gx TCFRAME_HOME ~/tcframe
 
-
 starship init fish | source
 kubectl completion fish | source
 zoxide init fish | source
+fnm env --use-on-cd | source
 fish_add_path $HOME/.local/bin

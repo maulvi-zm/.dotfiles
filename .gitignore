@@ -1,2 +1,9 @@
 **/.DS_Store
 composer
+mole
+.config/mole
+.config/configstore/update-notifier-@google
+.config/exercism
+.config/flutter
+.config/github-copilot
+.config/github-copilot

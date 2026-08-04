@@ -6,4 +6,30 @@ mole
 .config/exercism
 .config/flutter
 .config/github-copilot
-.config/github-copilot
+
+# --- credentials: never commit ---
+.config/gh/
+.config/sqlit/connections.json
+.config/sqlit/queries/
+
+# --- per-machine generated state (avoids merge conflicts across branches) ---
+.config/fish/fish_variables
+.config/nvim/lazy-lock.json
+.config/nvim/lazyvim.json
+.config/herdr/session.json
+.config/herdr/*.log
+.config/herdr/.plugins.lock
+.config/hunk/state.json
+
+# --- tpm-managed clones, reinstalled with prefix+I ---
+.config/tmux/plugins/
+
+# --- build artifacts ---
+.config/opencode/node_modules/
+.config/opencode/package.json
+.config/opencode/package-lock.json
+.config/opencode/bun.lock
+.config/raycast/**/compiled_raycast_swift/
+.config/raycast/**/compiled_raycast_rust/
+.config/raycast/**/*.js.map
+.config/herdr/plugins/github/

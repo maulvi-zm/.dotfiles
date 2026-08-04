@@ -1,22 +1,19 @@
 eval $(/opt/homebrew/bin/brew shellenv)
 
-# Aliases
-alias tcframe $TCFRAME_HOME/scripts/tcframe
-alias ls 'eza --icons=always'
-
 # Global env
-set -gx PATH $HOME/.cargo/bin $PATH
-set -gx PATH $HOME/.bun/bin $PATH
-set -gx PATH $HOME/development/flutter/bin $PATH
-set -gx PATH $HOME/.gem/bin $PATH
-set -gx CHROME_EXECUTABLE "/Applications/Arc.app/Contents/MacOS/Arc" # CHROME_EXECUTABLE for Flutter
 set -gx EDITOR nvim
 
-# User env
-set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
+if status is-interactive
+    set -gx KUBECONFIG ~/.kube/teleport-config.yaml
 
-carapace _carapace | source
+    atuin init fish --disable-up-arrow | source
+
+    set -gx CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense'
+    carapace _carapace | source
+    # carapace claims `tsh`, which blocks fish from autoloading this
+    source $__fish_config_dir/completions/tsh.fish
+end
+
 starship init fish | source
 zoxide init fish | source
-fnm env --use-on-cd | source
 fish_add_path $HOME/.local/bin

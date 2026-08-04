@@ -60,7 +60,7 @@ require("lazy").setup({
                 "tarPlugin",
                 "tohtml",
                 "tutor",
-                "zipPlugin",
+                -- "zipPlugin", -- needed for clojure-lsp zipfile:// jar navigation
             },
         },
     },

@@ -1,0 +1,2 @@
+{:lint-as {mount.core/defstate clojure.core/def
+           bundle-service.tracing/defn-traced clojure.core/defn}}

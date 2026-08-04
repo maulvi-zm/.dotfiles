@@ -1,0 +1,8 @@
+# Press 'H' in the Main (log) view to open that commit in hunk
+bind main H !hunk show %(commit)
+
+# Press 'H' in the Status view to review staged/unstaged changes for a file
+bind status H !hunk diff %(file)
+
+# Press 'H' in the Generic/Pager view to pipe whatever you're looking at to hunk
+bind generic H !hunk diff

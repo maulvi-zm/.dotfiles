@@ -1,0 +1,173 @@
+# AeroSpace config
+# Docs: https://nikitabobko.github.io/AeroSpace/guide
+config-version = 2
+
+after-startup-command = []
+start-at-login = true
+auto-reload-config = true
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+automatically-unhide-macos-hidden-apps = false
+focus-follows-mouse.enabled = false
+key-mapping.preset = 'qwerty'
+
+# 0=default/scratch, T=terminal B=browser A=api(HTTPie) W=Lark(work chat) E=events(calendar)
+persistent-workspaces = ["0", "T", "B", "A", "W", "E"]
+
+on-mode-changed = []
+
+# Zero gaps: single-window workflow, gaps only cost pixels.
+# Bump these if you start tiling more.
+gaps.inner.horizontal = 0
+gaps.inner.vertical = 0
+gaps.outer.left = 0
+gaps.outer.bottom = 0
+gaps.outer.top = 0
+gaps.outer.right = 0
+
+# ---------------------------------------------------------------- app rules
+
+# Float system dialogs / utilities
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+if.window-title-regex-substring = 'Copy|Move|Info|Delete'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.calculator'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.archiveutility'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.raycast.macos'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+if.window-title-regex-substring = 'Open|Save'
+run = 'layout floating'
+
+# Assign apps to workspaces
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace T'
+
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'io.httpie.desktop'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.larksuite.larkApp'
+run = 'move-node-to-workspace W'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = 'move-node-to-workspace E'
+
+# ---------------------------------------------------------------- main mode
+[mode.main.binding]
+
+# Layout
+alt-slash = 'layout tiles horizontal vertical'
+alt-comma = 'layout accordion horizontal vertical'
+alt-f = 'fullscreen'
+alt-shift-space = 'layout floating tiling'
+
+# Float focused window and center it (args = width% height% of screen)
+alt-c = [
+    'layout floating',
+    'exec-and-forget /Users/maulvimaulana/.dotfiles/.config/aerospace/center-window.sh 80 80',
+]
+
+# Focus
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+# Move
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# Resize
+alt-minus = 'resize smart -50'
+alt-equal = 'resize smart +50'
+alt-r = 'mode resize'
+
+# Workspaces
+# Right-hand cluster: keyboard has no right option key, so keep every
+# workspace key reachable without contorting the left hand.
+alt-semicolon = 'workspace T' # terminal
+alt-quote = 'workspace B'     # browser
+alt-p = 'workspace A'         # api (HTTPie)
+alt-o = 'workspace W'         # lark
+alt-i = 'workspace E'         # events (calendar)
+alt-u = 'workspace 0'         # scratch
+
+alt-shift-semicolon = 'move-node-to-workspace T'
+alt-shift-quote = 'move-node-to-workspace B'
+alt-shift-p = 'move-node-to-workspace A'
+alt-shift-o = 'move-node-to-workspace W'
+alt-shift-i = 'move-node-to-workspace E'
+alt-shift-u = 'move-node-to-workspace 0'
+
+alt-tab = 'workspace-back-and-forth'
+alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+alt-shift-slash = 'mode service'
+
+# -------------------------------------------------------------- resize mode
+[mode.resize.binding]
+h = 'resize width -50'
+j = 'resize height +50'
+k = 'resize height -50'
+l = 'resize width +50'
+minus = 'resize smart -50'
+equal = 'resize smart +50'
+b = 'balance-sizes'
+esc = 'mode main'
+enter = 'mode main'
+
+# ------------------------------------------------------------- service mode
+[mode.service.binding]
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main']
+f = ['layout floating tiling', 'mode main']
+backspace = ['close-all-windows-but-current', 'mode main']
+
+alt-shift-h = ['join-with left', 'mode main']
+alt-shift-j = ['join-with down', 'mode main']
+alt-shift-k = ['join-with up', 'mode main']
+alt-shift-l = ['join-with right', 'mode main']

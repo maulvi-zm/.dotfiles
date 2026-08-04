@@ -1,0 +1,14 @@
+{
+  "theme": "macchiato",
+  "preferred_editor": "nvim",
+  "expanded_nodes": [
+    "conn:BS INT",
+    "conn:Demo SQLite",
+    "conn:Demo SQLite/folder:databases",
+    "conn:SS INT"
+  ],
+  "custom_themes": [
+    "macchiato",
+    "macchiato-solid"
+  ]
+}

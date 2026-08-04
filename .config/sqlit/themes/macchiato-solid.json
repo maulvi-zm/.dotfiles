@@ -1,0 +1,38 @@
+{
+  "_note": "Catppuccin Macchiato, solid dark bg matching Ghostty's Catppuccin depth. Use if transparent variant looks off.",
+  "theme": {
+    "name": "macchiato-solid",
+    "dark": true,
+    "primary": "#8AADF4",
+    "secondary": "#B7BDF8",
+    "accent": "#C6A0F6",
+    "warning": "#EED49F",
+    "error": "#ED8796",
+    "success": "#A6DA95",
+    "foreground": "#CAD3F5",
+    "background": "#181926",
+    "surface": "#1E2030",
+    "panel": "#24273A",
+    "variables": {
+      "border": "#5B6078",
+      "border-blurred": "#363A4F",
+      "foreground-muted": "#A5ADCB",
+      "text-disabled": "#6E738D",
+      "footer-background": "#1E2030",
+      "footer-key-foreground": "#8AADF4",
+      "footer-description-foreground": "#CAD3F5",
+      "button-color-foreground": "#181926",
+      "block-cursor-background": "#8AADF4",
+      "block-cursor-foreground": "#181926",
+      "block-cursor-text-style": "none",
+      "input-cursor-background": "#F4DBD6",
+      "input-cursor-foreground": "#181926",
+      "input-selection-background": "#8AADF4 35%",
+      "scrollbar": "#494D64",
+      "scrollbar-hover": "#5B6078",
+      "scrollbar-active": "#8AADF4",
+      "mode-normal-color": "#EED49F",
+      "mode-insert-color": "#A6DA95"
+    }
+  }
+}

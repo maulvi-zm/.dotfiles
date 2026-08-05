@@ -18,8 +18,9 @@ automatically-unhide-macos-hidden-apps = false
 focus-follows-mouse.enabled = false
 key-mapping.preset = 'qwerty'
 
-# 0=default/scratch, T=terminal B=browser A=api(HTTPie) W=Lark(work chat) E=events(calendar)
-persistent-workspaces = ["0", "T", "B", "A", "W", "E"]
+# 0=default/scratch, T=terminal B=browser A=api(HTTPie) W=work chat (Lark/WhatsApp/LINE)
+# E=events(calendar) N=notes(Obsidian)
+persistent-workspaces = ["0", "T", "B", "A", "W", "E", "N"]
 
 on-mode-changed = []
 
@@ -91,8 +92,20 @@ if.app-id = 'com.larksuite.larkApp'
 run = 'move-node-to-workspace W'
 
 [[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = 'move-node-to-workspace W'
+
+[[on-window-detected]]
+if.app-id = 'jp.naver.line.mac'
+run = 'move-node-to-workspace W'
+
+[[on-window-detected]]
 if.app-id = 'com.apple.iCal'
 run = 'move-node-to-workspace E'
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace N'
 
 # ---------------------------------------------------------------- main mode
 [mode.main.binding]
@@ -135,6 +148,7 @@ alt-p = 'workspace A'         # api (HTTPie)
 alt-o = 'workspace W'         # lark
 alt-i = 'workspace E'         # events (calendar)
 alt-u = 'workspace 0'         # scratch
+alt-leftSquareBracket = 'workspace N' # notes (Obsidian)
 
 alt-shift-semicolon = 'move-node-to-workspace T'
 alt-shift-quote = 'move-node-to-workspace B'
@@ -142,6 +156,7 @@ alt-shift-p = 'move-node-to-workspace A'
 alt-shift-o = 'move-node-to-workspace W'
 alt-shift-i = 'move-node-to-workspace E'
 alt-shift-u = 'move-node-to-workspace 0'
+alt-shift-leftSquareBracket = 'move-node-to-workspace N'
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'

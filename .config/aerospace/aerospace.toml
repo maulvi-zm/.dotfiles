@@ -119,7 +119,7 @@ alt-shift-space = 'layout floating tiling'
 # Float focused window and center it (args = width% height% of screen)
 alt-c = [
     'layout floating',
-    'exec-and-forget /Users/maulvimaulana/.dotfiles/.config/aerospace/center-window.sh 80 80',
+    'exec-and-forget /Users/maulvizm/.dotfiles/.config/aerospace/center-window.sh 80 80',
 ]
 
 # Focus

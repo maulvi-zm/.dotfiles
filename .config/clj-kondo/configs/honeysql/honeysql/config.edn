@@ -1,0 +1,15 @@
+{:namespaces
+ {honeysql.helpers
+  {select    {:arities {:varargs {:min-arity 0}}}
+   from      {:arities {:varargs {:min-arity 0}}}
+   join      {:arities {:varargs {:min-arity 0}}}
+   left-join {:arities {:varargs {:min-arity 0}}}
+   right-join {:arities {:varargs {:min-arity 0}}}
+   full-join  {:arities {:varargs {:min-arity 0}}}
+   cross-join {:arities {:varargs {:min-arity 0}}}
+   order-by   {:arities {:varargs {:min-arity 0}}}
+   limit      {:arities {:varargs {:min-arity 0}}}
+   offset     {:arities {:varargs {:min-arity 0}}}
+   merge-join {:arities {:varargs {:min-arity 0}}}
+   modifiers  {:arities {:varargs {:min-arity 0}}}
+   lock       {:arities {:varargs {:min-arity 0}}}}}}

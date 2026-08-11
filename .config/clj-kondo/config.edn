@@ -1,2 +1,29 @@
-{:lint-as {mount.core/defstate clojure.core/def
-           bundle-service.tracing/defn-traced clojure.core/defn}}
+{:config-paths ["configs/honeysql/honeysql"]
+ :lint-as {mount.core/defstate                        clojure.core/def
+           bundle-service.tracing/defn-traced         clojure.core/defn
+           bundle-service.db.core/with-transaction    clojure.core/fn
+           failjure.core/attempt-all                  clojure.core/let
+           failjure.core/attempt->                    clojure.core/->
+           failjure.core/attempt->>                   clojure.core/->>
+           failjure.core/ok->                         clojure.core/->
+           failjure.core/ok->>                        clojure.core/->>
+           failjure.core/try*                         clojure.core/try
+           failjure.core/if-let-ok?                   clojure.core/let
+           failjure.core/if-let-failed?               clojure.core/let
+           failjure.core/when-let-ok?                 clojure.core/when-let
+           failjure.core/when-let-failed?             clojure.core/when-let
+           failjure.core/when-failed                  clojure.core/fn
+           failjure.core/if-failed                    clojure.core/if
+           honeysql.util/defalias                     clojure.core/def
+           crimson.core/with-multi                    clojure.core/fn
+           crimson.core/with-conn                     clojure.core/fn
+           bundle-service.monitoring.prom/defmetric   clojure.core/def}
+ :linters {:unresolved-symbol
+           {:exclude [select from where join left-join right-join
+                      full-join cross-join order-by limit offset
+                      modifiers lock merge-join update sset]}
+           :unresolved-var
+           {:exclude {honeysql.core    [format raw format-predicate]
+                      honeysql.helpers [select from where join left-join right-join
+                                        full-join cross-join order-by limit offset
+                                        modifiers lock merge-join update sset]}}}}

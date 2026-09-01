@@ -17,7 +17,7 @@ regularly bites when moving config between them.
 | Branch   | Machine  | User            | Home              |
 | -------- | -------- | --------------- | ----------------- |
 | `master` | personal | `maulvizm`      | `/Users/maulvizm` |
-| `work`   | work     | `maulvimaulana` | `/Users/maulvimaulana` |
+| `work`   | work     | `maulvi.maulana` | `/Users/maulvi.maulana` |
 
 `work` tracks `master` and adds work-only config on top.
 

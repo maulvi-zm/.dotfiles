@@ -2,11 +2,11 @@
   {
     "plugin_id": "herdr-splits",
     "name": "Herdr Splits",
-    "version": "0.5.1",
+    "version": "0.5.3",
     "min_herdr_version": "0.7.0",
     "description": "Seamless navigation and resizing between Herdr panes and Neovim splits",
-    "manifest_path": "/Users/maulvimaulana/.dotfiles/.config/herdr/plugins/github/herdr-splits-d880c4924f2b/herdr-plugin.toml",
-    "plugin_root": "/Users/maulvimaulana/.dotfiles/.config/herdr/plugins/github/herdr-splits-d880c4924f2b",
+    "manifest_path": "/Users/maulvi.maulana/.dotfiles/.config/herdr/plugins/github/herdr-splits-d880c4924f2b/herdr-plugin.toml",
+    "plugin_root": "/Users/maulvi.maulana/.dotfiles/.config/herdr/plugins/github/herdr-splits-d880c4924f2b",
     "enabled": true,
     "platforms": [
       "linux",
@@ -114,9 +114,9 @@
       "kind": "github",
       "owner": "lmilojevicc",
       "repo": "herdr-splits.nvim",
-      "resolved_commit": "107273e004e4f7ef07f13c83164d2cb2c51df65d",
-      "managed_path": "/Users/maulvimaulana/.config/herdr/plugins/github/herdr-splits-d880c4924f2b",
-      "installed_unix_ms": 1785382627125
+      "resolved_commit": "94f30cf4e9ac76ddf185a3acd0977be728fa4106",
+      "managed_path": "/Users/maulvi.maulana/.config/herdr/plugins/github/herdr-splits-d880c4924f2b",
+      "installed_unix_ms": 1788264808161
     }
   }
 ]

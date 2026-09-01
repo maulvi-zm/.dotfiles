@@ -3,6 +3,11 @@
   "preferred_editor": "nvim",
   "expanded_nodes": [
     "conn:BS INT",
+    "conn:BS INT/folder:tables",
+    "conn:BS Local",
+    "conn:BS Local/folder:tables",
+    "conn:BS Local/folder:tables/schema:public",
+    "conn:BS Local/folder:tables/schema:public/table:public.bundles",
     "conn:Demo SQLite",
     "conn:Demo SQLite/folder:databases",
     "conn:SS INT"
